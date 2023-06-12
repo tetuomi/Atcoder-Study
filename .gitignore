@@ -4,3 +4,4 @@ contest/*
 **/a.exe
 
 !.vscode/atcoder.code-snippets
+!contest/exec.sh
