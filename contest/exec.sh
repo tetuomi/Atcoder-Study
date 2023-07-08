@@ -1,7 +1,7 @@
 #!/bin/bash
 
-echo "[\e[34mx\e[0m] g++ -std=gnu++17 -Wall -Wextra -O2 $1 -o a.out"
-g++ -std=gnu++17 -Wall -Wextra -O2 $1 -o a.out
+echo "[\e[34mx\e[0m] g++ -std=gnu++17 $1 -o a.out"
+g++ -std=gnu++17 $1 -o a.out
 
 result=$?
 if [ $result -ne 0 ]
