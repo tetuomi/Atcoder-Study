@@ -14,13 +14,24 @@ int main(void)
     vector<int> a(n);
     for (int i = 0; i < n; i++) cin >> a[i];
 
-    int cnt = 0;
-    for (int i = 0; i < n-1; i++)
+    ll ans = 0;
+    ll cnt = 0;
+    vector<bool> seen(n, false);
+    for (int i = 0; i < n; i++)
     {
-        if (a[i] < a[i+1]) cnt++;
+        if (a[i] == i+1) cnt++, seen[i] = true;
     }
+    ans += cnt * (cnt-1)/2;
+    // cout << ans << endl;
 
-    cout << cnt*(cnt-1)/2 << '\n';
+    cnt = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if (seen[i]==false && a[a[i]-1] == i+1) cnt++;
+    }
+    ans += cnt/2;
+
+    cout << ans << '\n';
 
     return 0;
 }
