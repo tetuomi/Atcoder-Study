@@ -29,7 +29,6 @@ public:
 	explicit UnionFind(size_t n)
 		: m_parents(n)
 		, m_sizes(n, 1)
-        , m_ranks(n, 0)
 	{
 		iota(m_parents.begin(), m_parents.end(), 0);
 	}
