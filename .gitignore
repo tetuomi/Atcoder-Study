@@ -2,6 +2,7 @@
 contest/*
 **/a.out
 **/a.exe
+venv/**
 
 !.vscode/atcoder.code-snippets
 !contest/exec.sh
